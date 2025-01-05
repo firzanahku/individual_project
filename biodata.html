@@ -1,0 +1,428 @@
+<html>
+    <head>
+        <title>Biodata</title>
+
+        <style>
+            body {
+              margin: 0;
+              padding: 0;
+              font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+      
+            /* Full-page video background */
+            .video-background {
+              position: fixed; 
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover; 
+              z-index: -1; 
+            }
+      
+            /* Content styling for visibility */
+            .content {
+              position: relative; 
+              z-index: 1; 
+              color: white; 
+              text-align: center; 
+              font-family:Arial, Helvetica, sans-serif; 
+              padding: 20px;
+            }
+      
+            /* Top navigation bar */
+            .topnav {
+              overflow: hidden;
+              background-color: #031924;
+            }
+      
+            .topnav a {
+              float: left;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            }
+      
+            .topnav a:hover {
+              background-color: #ddd;
+              color: black;
+            }
+      
+            .topnav a.active {
+              background-color:#031924;
+              color: white;
+            }
+
+            </style>
+        <body>
+        <!-- Top navigation bar -->
+        <div class="topnav">
+            <a class="active" href="index2.html" target="blank" accesskey="p">Home</a>
+            <a href="biodata.html" target="_blank" accesskey="h">About Me</a>
+            <a href="hobbies.html" target="_blank" accesskey="k">Hobbies</a>
+            <a href="education.html" target="_blank" accesskey="r">Education</a>
+            <a href="family.html" target="_blank" accesskey="b">Family</a>
+            <a href="contact.html" target="_blank" accesskey="v">Contact</a>
+        </div>
+
+        <br clear="all">
+
+
+        <style>
+            #clock {
+              font-size: 30px;
+              color: rgb(181, 50, 135);
+              text-align: center;
+              padding: 10px;
+              position: absolute;
+              right: 10px;
+              top: 50px;
+            }
+          </style>
+          
+          <script>
+            function updateClock() {
+              var now = new Date();
+              var hours = now.getHours();
+              var minutes = now.getMinutes();
+              var seconds = now.getSeconds();
+              var ampm = hours >= 12 ? 'PM' : 'AM';
+          
+              hours = hours % 12;
+              hours = hours ? hours : 12; // 0 becomes 12
+              minutes = minutes < 10 ? '0' + minutes : minutes;
+              seconds = seconds < 10 ? '0' + seconds : seconds;
+          
+              // Display the time
+              document.getElementById('clock').innerText = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+            }
+          
+            setInterval(updateClock, 1000);
+            updateClock();
+          </script>
+          
+          <div id="clock"></div>
+
+
+
+<!-- Styling for the Biodata Section (Black, White, and Grey Theme with Professional Look) -->
+<style>
+    /* Global Styling */
+    body {
+        background-color: #eacc8b8e; /* Light grey background for a clean look */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #444; /* Slightly darker text for better readability */
+    }
+
+    /* Biodata Container Styling */
+    .biodata {
+        background-color: #ffffff; /* White background for the biodata section */
+        padding: 40px;
+        width: 75%;
+        margin: 40px auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for better depth */
+        border: 1px solid #ddd;
+    }
+
+    /* Title and Section Headings */
+    .biodata h1 {
+        text-align: center;
+        color: #34495e;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .biodata h2 {
+        color: #2c3e50;
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    /* Paragraph and List Styling */
+    .biodata p, .biodata li {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 12px;
+    }
+
+    .biodata strong {
+        color: #000; /* Bold black text for key information */
+    }
+
+    .biodata a {
+        color: #2980b9; /* Blue for links to give a professional touch */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .biodata a:hover {
+        text-decoration: underline;
+    }
+
+    /* Styling for unordered lists */
+    .biodata ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .biodata ul li {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Additional Content Styling */
+    .biodata .skills, .biodata .education, .biodata .social-media {
+        margin-top: 30px;
+        background-color: #f4f6f7;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .biodata .skills h3, .biodata .education h3, .biodata .social-media h3 {
+        text-align: left;
+        font-size: 24px;
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .biodata .skills ul, .biodata .education ul, .biodata .social-media ul {
+        padding-left: 20px;
+        list-style-type: none;
+    }
+
+    .biodata .skills li, .biodata .education li, .biodata .social-media li {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.6;
+    }
+</style>
+
+
+<!-- Styling for the Biodata Section with Separate Borders for Each Part -->
+<style>
+    /* Global Styling */
+    body {
+        background-color: #e6b082a5; /* Dark grey background */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #fff; /* White text for readability */
+    }
+
+    /* Biodata Container Styling */
+    .biodata {
+        width: 75%;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #ffffff; /* White background for the biodata section */
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for better depth */
+        border: 1px solid #333; /* Grey border */
+    }
+
+    /* Title and Section Headings */
+    .biodata h1 {
+        text-align: center;
+        color: #333; /* Dark grey for the main heading */
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .biodata h2 {
+        color: #444; /* Dark grey for section titles */
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    /* Section Styling with Borders */
+    .section {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f4f4f4; /* Light grey background for sections */
+        border: 1px solid #333; /* Dark border for each section */
+        border-radius: 8px;
+    }
+
+    .section p, .section li {
+        font-size: 18px;
+        color: #666; /* Lighter grey text */
+        line-height: 1.8;
+        margin-bottom: 12px;
+    }
+
+    .section strong {
+        color: #000; /* Bold black text for key information */
+    }
+
+    .section a {
+        color: #007BFF; /* Blue links */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .section a:hover {
+        text-decoration: underline;
+    }
+
+    /* Unordered list styling for sections */
+    .section ul {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section ul li {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.6;
+    }
+
+    table, td, tr, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    color: black; 
+}
+
+td {
+    text-align: center; /* Center the text */
+    background-color: rgb(212, 162, 193); /* Set background color */
+    color: black; /* Set text color to black */
+}
+</style>
+
+
+
+
+
+
+<!-- Biodata Section with Separate Borders for Each Part -->
+<div class="biodata">
+    <h1>🦋✨ My Biodata🦋✨</h1>
+
+<div align="center">
+  <img src="images/WhatsApp Image 2024-11-05 at 14.22.56.jpeg" 
+   height="300" border="10" hspace="10">
+
+  <img src="images/WhatsApp Image 2024-11-12 at 15.33.41.jpeg"
+  height="300" border="10" >
+  </div>
+
+    <!-- About Me Section with Border -->
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am a 20-year-old passionate individual from Segambut Tengah, Kuala Lumpur. I enjoy exploring new ideas, learning, and challenging myself in various fields. I love spending my free time reading about emerging technologies, as well as taking care of my kitten, who brings joy to my life.
+        </p>
+        <p>
+            My personality is driven by curiosity and creativity. I am constantly looking for opportunities to grow, collaborate, and innovate in various aspects of life. Whether it's technology, hobbies, or professional growth, I believe in lifelong learning and development.
+        </p>
+    </div>
+
+    <!-- Personal Information Section with Border -->
+    <div class="section">
+        <h2>Personal Information</h2>
+        <p><strong>Full Name:</strong> Firzanah Bt Jamaludin</p>
+        <p><strong>Age:</strong> 21 Years Old</p>
+        <p><strong>Location:</strong> Segambut Tengah, Kuala Lumpur</p>
+        <p><strong>Pet:</strong> Kitten</p>
+
+        <body >
+            <table style="width: 70%;">
+                 <caption> Table 1: The types of kitten</caption>
+                 <tr>
+                     <th>Name</th>
+                     <th>Types</th>
+                     <th>Age</th>
+                 </tr>
+                 <tr>
+                     <td>Pupuyu</td>
+                     <td>British Short hair</td>
+                     <td>3 year</td>
+                 </tr>
+                 <tr>
+                     <td>Yuyu</td>
+                     <td>British Long hair</td>
+                     <td>3 year</td>
+                 </tr>
+
+                 <tr>
+                    <td>Oreo</td>
+                    <td>British + Scootish (Biscot)</td>
+                    <td>1years 8 months</td>
+                 </tr>
+             </table>
+    </div>
+
+
+    <!-- Interests Section with Border -->
+    <div class="section">
+        <h2>Interests</h2>
+            <ul style="list-style-image: url(images/bullet.png);" height="1" width="1">
+                <li> Animals and Pet care</li>
+                <li> Travelling and food hunter</li>
+                <li> Staycation</li>
+        </ul>
+    </div>
+
+    <!-- Skills Section with Border -->
+    <div class="section">
+        <h2>Skills</h2>
+        <p>
+         <ol type="i">
+            <li>Canva</li>
+            <li>Microsoft Words</li>
+            <li>Communication</li>
+            <li>Capcut</li>
+        </0l>
+        </p>
+    </div>
+
+
+
+    <!-- Education Section with Border -->
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>University: Diploma in Information Management, UiTM Rembau, N9</strong> </li>
+            <li><strong>High School:</strong> SMK Segambut Jaya, Kuala Lumpur (SEJAYA)</li>
+            <li><strong>Elementary School:</strong> SK Segambut Makmur</li>
+        </ul>
+    </div>
+
+    <!-- Contact Section with Border -->
+    <div class="section">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:nrfrznhjml@gmail.com">nrfrznhjml@gmail.com</a></p>
+        <p>Feel free to reach out to me if you'd like to connect, collaborate, or just chat about any interesting ideas!</p>
+    </div>
+
+    <!-- Social Media Section with Border -->
+    <div class="section">
+        <h2>Social Media</h2>
+        <ul>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/zanahjamal/">Instagram.com/in/firzanah</a></li>
+            <li><strong>Tiktok:</strong> <a href="https://www.tiktok.com/@frnhjml?_t=8sdwDZdREgi&_r=">Tiktok.com/firzanah</a></li>
+            <li><strong>Youtube:</strong> <a href="https://www.youtube.com/@nurfirzanahjamaludin">Youtube.com/firzanah</a></li>
+            <li><strong>Gmail:</strong> <a href="mailto:nrfrznhjml@gmail.com">Gmail.com/firzanah</a></li>
+        </ul>
+        </ul>
+    </div>
+
+    </body>
+</html>
